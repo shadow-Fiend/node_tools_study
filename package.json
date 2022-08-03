@@ -1,0 +1,28 @@
+{
+  "name": "node_tools_study",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node ./index.js",
+    "mactest1": "node ./src/test/index1.js & node ./src/test/index2.js",
+    "wintest1": "concurrently \"node ./src/test/index1.js\" \"node ./src/test/index2.js\"",
+    "mactest2": "npm run mactest1 && node ./src/test/index3.js",
+    "wintest2": "npm run wintest1 && node ./src/test/index3.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shadow-Fiend/node_tools_study.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shadow-Fiend/node_tools_study/issues"
+  },
+  "homepage": "https://github.com/shadow-Fiend/node_tools_study#readme",
+  "devDependencies": {
+    "concurrently": "^7.2.2"
+  }
+}
